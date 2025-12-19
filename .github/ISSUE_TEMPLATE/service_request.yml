@@ -1,0 +1,59 @@
+name: 服务需求（自动化定制）
+description: 用于提交 Excel/Word/文件批处理等自动化需求
+title: "[Service] "
+labels: ["service"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请尽量完整填写，信息越清楚，交付越快、返工越少。
+        你也可以先看需求问卷：https://amy427.github.io/services/intake/
+  - type: textarea
+    id: goal
+    attributes:
+      label: 1. 目标（你要解决什么问题？）
+      placeholder: 一句话描述你的需求
+    validations:
+      required: true
+  - type: textarea
+    id: input
+    attributes:
+      label: 2. 输入（你提供什么？）
+      placeholder: 文件类型、样例数据、截图说明
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: 3. 输出（你希望得到什么结果？）
+      placeholder: 输出格式、样例、规则
+    validations:
+      required: true
+  - type: textarea
+    id: rules
+    attributes:
+      label: 4. 规则与边界
+      placeholder: 处理数量、特殊规则、不能改的部分
+    validations:
+      required: false
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 5. 验收标准（2-3条）
+      placeholder: 例如：同类新数据也能一键生成；输出字段一致等
+    validations:
+      required: true
+  - type: input
+    id: deadline
+    attributes:
+      label: 6. 截止时间（可选）
+      placeholder: 例如：本周日/2025-12-22
+    validations:
+      required: false
+  - type: input
+    id: budget
+    attributes:
+      label: 7. 预算区间（可选）
+      placeholder: 例如：100-300
+    validations:
+      required: false
